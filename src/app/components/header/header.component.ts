@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit {
       });
   }
 
-  // Función recursiva para obtener el título de la ruta activa
+  // actualizar
   getTitle(route: ActivatedRoute): string {
     let childRoute = route.firstChild;
     if (childRoute?.snapshot.data['title']) {
