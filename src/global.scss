@@ -35,3 +35,12 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
+.my-custom-color .action-sheet-group {
+    border: solid 5px blue;
+    border-radius: 20px;
+}
+
+.my-custom-color2 .alert-wrapper{
+    border: solid 5px red;
+    border-radius: 20px;
+}

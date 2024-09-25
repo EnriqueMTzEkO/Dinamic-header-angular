@@ -6,8 +6,7 @@ import { ActionSheetPage } from './action-sheet.page';
 const routes: Routes = [
   {
     path: '',
-    component: ActionSheetPage,
-    data: { title: 'Action sheet' }
+    component: ActionSheetPage
   }
 ];
 

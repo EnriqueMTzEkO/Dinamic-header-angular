@@ -14,22 +14,25 @@ pageTitle: string = '';
   ngOnInit() {
   }
 
-  onClick(){
+  ShowActionSheet(){
 this.presentActionSheet();
   }
   async presentActionSheet() {
     const actionSheet = await this.actionSheetController.create({
-      header: 'Actions',
+      header: 'What do you want to do with this?',
+      cssClass: "my-custom-color",
       buttons: [
         {
           text: 'Delete',
           role: 'destructive',
+          icon: "trash",
           data: {
             action: 'delete',
           },
         },
         {
           text: 'Share',
+          icon: "share-social",
           data: {
             action: 'share',
           },
@@ -37,6 +40,7 @@ this.presentActionSheet();
         {
           text: 'Cancel',
           role: 'cancel',
+          icon: "close",
           data: {
             action: 'cancel',
           },

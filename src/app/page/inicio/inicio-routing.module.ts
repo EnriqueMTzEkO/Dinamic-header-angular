@@ -6,8 +6,7 @@ import { InicioPage } from './inicio.page';
 const routes: Routes = [
   {
     path: '',
-    component: InicioPage,
-    data: { title: 'Inicio' }
+    component: InicioPage
   }
 ];
 

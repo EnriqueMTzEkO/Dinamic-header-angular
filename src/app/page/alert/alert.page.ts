@@ -16,9 +16,10 @@ export class AlertPage implements OnInit {
   async presentAlert(){
     const alert = await this.alertCTRL.create({
       header:'Alert',
-      subHeader:'subtitle',
-      message: 'This is an alert message.',
-      buttons: ['Ok']
+      cssClass: "my-custom-color2",
+      subHeader:'This is an alert accept carefully',
+      message: 'nah just click in "Acept".',
+      buttons: ['Acept']
     });
 
     await alert.present();

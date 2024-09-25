@@ -6,8 +6,7 @@ import { AlertPage } from './alert.page';
 const routes: Routes = [
   {
     path: '',
-    component: AlertPage,
-    data: { title: 'Alert page' }
+    component: AlertPage
   }
 ];
 

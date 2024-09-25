@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
 
@@ -8,25 +8,12 @@ import { filter } from 'rxjs/operators';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  public title: string = '';
+  
 
-  constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
+  constructor() {}
 
   ngOnInit() {
-    this.router.events
-      .pipe(filter(event => event instanceof NavigationEnd))
-      .subscribe(() => {
-        const currentRoute = this.activatedRoute.root;
-        this.title = this.getTitle(currentRoute);
-      });
   }
+  @Input() public title: string = '';
 
-  // actualizar
-  getTitle(route: ActivatedRoute): string {
-    let childRoute = route.firstChild;
-    if (childRoute?.snapshot.data['title']) {
-      return childRoute.snapshot.data['title'];
-    }
-    return childRoute ? this.getTitle(childRoute) : '';
-  }
 }
